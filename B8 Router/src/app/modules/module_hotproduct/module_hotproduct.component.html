@@ -1,0 +1,15 @@
+<div class="wrap">
+  <div id="owl-demo" class="owl-carousel">
+    <div *ngFor="let danh_sach_giay of shoes_list">
+      <div class="item" onclick="location.href='details.html';">
+        <div class="cau_left">
+          <img class="lazyOwl" data-src="images/{{danh_sach_giay.image}}" alt="L{{danh_sach_giay.name}}">
+        </div>
+        <div class="cau_left">
+          <h4><a href="details.html">{{danh_sach_giay.name}}</a></h4>
+          <a href="details.html" class="btn">{{danh_sach_giay.gia + ' $'}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

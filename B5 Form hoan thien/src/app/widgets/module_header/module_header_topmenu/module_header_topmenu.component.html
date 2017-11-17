@@ -1,0 +1,27 @@
+<div class="header_bg">
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt=""/> </a>
+            </div>
+            <div class="h_icon">
+            <ul class="icon1 sub-icon1" (click)="cart_money()">
+                <li><a class="active-icon c1" href="#"><i></i></a>
+                    <ul class="sub-icon1 list">
+                        <li *ngFor="let san_pham of ds_gio_hang" class="san_pham_gio_hang">
+                            {{san_pham.ten}} | {{san_pham.so_luong}} | {{san_pham.so_luong * san_pham.gia}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+            <div class="h_search">
+                <form>
+                    <input type="text" value="">
+                    <input type="submit" value="">
+                </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

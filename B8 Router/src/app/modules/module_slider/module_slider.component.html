@@ -1,0 +1,87 @@
+<!--start-cursual-->
+<!--<script src="js/responsiveslides.min.js"></script>
+<script>
+  // You can also use "$(window).load(function() {"
+  $(function () {
+    $("#slider1").responsiveSlides({
+      auto: true,
+      pager: true,
+      nav: true,
+      speed: 500,
+      namespace: "callbacks",
+    });
+  });
+</script>-->
+
+<div class="slider-top">
+  <div class="wrap">
+    <div class="slider">
+
+      <ul class="rslides" id="slider1">
+        <li *ngFor="let ds_slider of danh_sach_slider" [@hieu_ung_slider] = "ds_slider.state" [id]="ds_slider.id">
+          <div class="da-slide">
+            <div class="welcome-to">
+              <h2>{{ds_slider.tieude}}</h2>
+              <p>{{ds_slider.mota}}</p>
+              <a href="#" class="da-link">shop now</a>
+            </div>
+            <div class="da-img"><img src="images/{{ds_slider.hinh}}" alt="" /></div>
+            <div class="clear"></div>
+          </div>
+        </li>
+        <!--<li>
+          <div class="da-slide">
+            <div class="welcome-to">
+              <h2>welcome to aditii</h2>
+              <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown
+                Bookmarksgrove, the headline of Alphabet Village and the subline of her own road.</p>
+              <a href="details.html" class="da-link">shop now</a>
+            </div>
+            <div class="da-img"><img src="images/slider1.png" alt="image01" /></div>
+            <div class="clear"></div>
+          </div>
+        </li>
+        <li>
+          <div class="da-slide">
+            <div class="welcome-to welcome-to1">
+              <h2>Easy management</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                texts. Separated they live in Bookmarksgrove right at the coast.</p>
+              <a href="details.html" class="da-link">shop now</a>
+            </div>
+            <div class="da-img da-img1"><img src="images/slider2.png" alt="image01" /></div>
+            <div class="clear"></div>
+          </div>
+        </li>
+        <li>
+          <div class="da-slide">
+            <div class="welcome-to">
+              <h2>Revolution</h2>
+              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic
+                country, in which roasted parts of sentences fly.</p>
+              <a href="details.html" class="da-link">shop now</a>
+            </div>
+            <div class="da-img"><img src="images/slider3.png" alt="image01" /></div>
+            <div class="clear"></div>
+          </div>
+        </li>
+        <li>
+          <div class="da-slide">
+            <div class="welcome-to welcome-to1">
+              <h2>Quality Control</h2>
+              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One
+                day however a small line of blind text by the name.</p>
+              <a href="details.html" class="da-link">shop now</a>
+            </div>
+            <div class="da-img da-img1"><img src="images/slider4.png" alt="image01" /></div>
+            <div class="clear"></div>
+          </div>
+        </li>-->
+      </ul>
+
+      <div class="next" (click)="thay_doi_next()">></div>
+      <div class="prev" (click)="thay_doi_prev()"><</div>
+    </div>
+  </div>
+</div>
+<!---->

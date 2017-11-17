@@ -1,0 +1,18 @@
+
+<div class="wrap">
+<!----start-img-cursual---->
+	<div id="owl-demo" class="owl-carousel">	
+		
+			<div *ngFor="let usb of ds_usb" class="item" onclick="location.href='#';">				
+				<div class="cau_left">
+					<img class="lazyOwl" src="images/{{usb.hinh}}" alt="Lazy Owl Image">
+				</div>
+				<div class="cau_left">
+					<h4><a href="#">{{usb.ten}}</a></h4>
+					<a href="#" class="btn">shop</a>
+				</div>				
+			</div>	
+							
+	</div>
+	<!----//End-img-cursual---->
+</div>

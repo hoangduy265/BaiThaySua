@@ -1,0 +1,83 @@
+<br>
+<div class="container">
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+
+      <div *ngIf="da_gui_form"  class="panel panel-success">
+              <div class="panel-heading">
+                    <h3 class="panel-title">Đăng ký thành công!</h3>
+              </div>
+        </div>
+
+        <form #FormDangKy="ngForm" (ngSubmit)="GuiForm()" action="" method="POST" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <legend>Đăng ký tài khoản</legend>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        Họ tên:
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" #ho_ten='ngModel' ngControl='ho_ten' [(ngModel)]="user.ho_ten" name="ho_ten" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        Tài Khoản:
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" #tai_khoan='ngModel' ngControl='tai_khoan' [(ngModel)]="user.tai_khoan" name="tai_khoan" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        Email:
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" #email='ngModel' ngControl='email' [(ngModel)]="user.email" name="email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        Mật khẩu:
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="password" #mat_khau='ngModel' ngControl='mat_khau' [(ngModel)]="user.mat_khau" required name="mat_khau" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        Nhập lại mật khẩu:
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="password" name="nhap_lai_mat_khau" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        Ngày sinh:
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" #ngay_sinh='ngModel' ngControl='ngay_sinh' [(ngModel)]="user.ngay_sinh" name="ngay_sinh" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        Nơi sinh:
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" #noi_sinh='ngModel' ngControl='noi_sinh' [(ngModel)]="user.noi_sinh" name="noi_sinh" class="form-control">
+                    </div>
+                </div>
+                
+
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <button type="submit" [disabled]="!FormDangKy.form.valid" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+    
+</div>
+

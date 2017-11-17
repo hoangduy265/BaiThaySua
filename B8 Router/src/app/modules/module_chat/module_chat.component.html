@@ -1,0 +1,16 @@
+<div class="khungchat" [@hieu_ung_an_hien] = trang_thai_khung_chat>
+    <div class="titlechat" (click)=kiem_tra_trang_thai_khung_chat()>
+        Chat with us
+    </div>
+    <div class="noihienchat">
+        <div class="khunghienchat">
+            <div class="" *ngFor="let tinchat of mang_chat">
+                <div class="tinchat tinchat{{tinchat.nguoigui}}">{{tinchat.noidung}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="khungnhapchat">
+        <input type="text" class="o_chat" #khung_nhap_chat (keyup.enter)="chat_enter($event)">
+        <input type="button" value="Send" (click)=chat_click(khung_nhap_chat)>
+    </div>
+</div>

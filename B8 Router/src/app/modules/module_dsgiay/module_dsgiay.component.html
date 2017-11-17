@@ -1,0 +1,17 @@
+<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" *ngFor="let danh_sach_giay of shoes_list; let i = index">
+  <div *ngIf="i < 4">
+    <div>
+      <img src="images/{{danh_sach_giay.image}}">
+    </div>
+    <div>
+      <h4>{{danh_sach_giay.name}}</h4>
+    </div>
+    <div>
+      {{danh_sach_giay.gia}}
+    </div>
+  </div>
+</div>
+<div style="clear: both"></div>
+<div *ngIf="shoes_list.length > 4">
+  <button type="button" class="btn btn-default">Con nhieu sp khac</button>
+</div>
